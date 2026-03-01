@@ -254,6 +254,24 @@
             display: flex;
             opacity: 1;
         }
+
+        .modal-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
     </style>
 </head>
 
@@ -857,20 +875,126 @@
         </div>
     </footer>
 
-    <!-- 9. MODALS -->
-    <!-- Privacy -->
-    <div id="privacyModal" class="modal" onclick="closeModals()">
-        <div class="bg-white p-10 rounded-2xl max-w-2xl w-[90%] max-h-[80vh] overflow-y-auto relative"
+    <!-- 9. MODALS (ULTRA-COMPLETE COMPLIANCE) -->
+    <!-- Privacy Policy -->
+    <div id="privacyModal"
+        class="modal fixed inset-0 z-50 bg-black/80 backdrop-blur-sm justify-center items-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl border border-gray-100"
             onclick="event.stopPropagation()">
-            <button class="absolute top-5 right-5 text-gray-400 hover:text-gray-900 text-xl"
-                onclick="closeModals()">×</button>
-            <h2 class="text-2xl font-bold mb-6">Privacy Policy</h2>
-            <div class="text-sm text-text-muted space-y-4 leading-relaxed">
-                <p>Your privacy is important to us. This policy outlines how we handle your personal information and
-                    ensure standard security practices (GDPR/CCPA compliant).</p>
-                <p>We process data for the order fulfillment, payment verification, and marketing communications if
-                    opted in. We do not sell or lease your personal information to unauthorized third parties.</p>
-                <!-- Standard legal text placeholder -->
+            <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+                <div class="flex items-center gap-3 text-gray-900">
+                    <i class="fa-solid fa-user-shield text-brand-blue text-xl"></i>
+                    <h3 class="font-bold text-xl tracking-tight">Data Privacy Policy</h3>
+                </div>
+                <button onclick="closeModals()"
+                    class="text-gray-400 hover:text-red-500 transition-colors text-2xl">×</button>
+            </div>
+            <div class="px-8 py-8 overflow-y-auto text-[13px] leading-relaxed space-y-6 text-text-muted modal-content">
+                <p class="font-bold text-gray-800 border-l-4 border-brand-blue pl-4">Your digital privacy is our
+                    operational mandate, fully aligned with European (GDPR), California (CCPA), and International
+                    General Data Protection Laws.</p>
+
+                <h4 class="font-bold text-gray-900 text-base mt-4">Section 1: Data Collection & Model</h4>
+                <p>As independent promotional partners, we emphasize total transparency: your stay on this domain is
+                    strictly tied to anonymous analytical metrics. We utilize tracking technologies (Pixel/Google
+                    Analytics) to monitor navigation patterns without collecting sensitive personal IDs. Any banking or
+                    personal address data provided during the purchase phase is handled exclusively through encrypted,
+                    secure gateways managed by the original authorized supplier.</p>
+
+                <h4 class="font-bold text-gray-900 text-base mt-4">Section 2: Cookies & Retargeting</h4>
+                <p>Temporary cookies may store information regarding your interactions with this landing page. This
+                    allows us to optimize advertising efficiency, ensuring you receive relevant content and preventing
+                    redundant ad fatigue across platforms like Meta and Google Ads.</p>
+
+                <h4 class="font-bold text-gray-900 text-base mt-4">Section 3: Third-Party Security</h4>
+                <p>We strictly prohibit the sale, lease, or unauthorized transfer of your metadata to external "data
+                    brokers." Our promotional infrastructure is built to isolate your user journey, ensuring that your
+                    data remains confidential and intended solely for the optimization of our dietary supplement
+                    reviews.</p>
+            </div>
+            <div class="px-8 py-4 bg-gray-50 border-t border-gray-100 flex justify-end">
+                <button onclick="closeModals()"
+                    class="bg-gray-900 text-white font-bold px-8 py-2 rounded-lg hover:bg-black transition-colors uppercase text-xs tracking-widest">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service -->
+    <div id="termsModal" class="modal fixed inset-0 z-50 bg-black/80 backdrop-blur-sm justify-center items-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl border border-gray-100"
+            onclick="event.stopPropagation()">
+            <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+                <div class="flex items-center gap-3 text-gray-900">
+                    <i class="fa-solid fa-file-invoice text-brand-blue text-xl"></i>
+                    <h3 class="font-bold text-xl tracking-tight">Terms of Service</h3>
+                </div>
+                <button onclick="closeModals()"
+                    class="text-gray-400 hover:text-red-500 transition-colors text-2xl">×</button>
+            </div>
+            <div class="px-8 py-8 overflow-y-auto text-[13px] leading-relaxed space-y-6 text-text-muted modal-content">
+                <p>By accessing this independent promotional page, you acknowledge and agree to the legal framework
+                    governing our referral operations.</p>
+
+                <h4 class="font-bold text-gray-900 text-base mt-4">Clause 1: Editorial vs. Logistics Bound</h4>
+                <p>We operate as a high-authority editorial review platform. While we provide detailed analysis of
+                    Gelatine Sculpt, the subsequent financial transaction and logistical fulfillment are managed by the
+                    original product manufacturer. We are exempt from logistical liabilities involving customs, shipping
+                    delays, or manufacturing defects originating from the producer's main operations.</p>
+
+                <h4 class="font-bold text-gray-900 text-base mt-4">Clause 2: Performance & Results Disclaimer</h4>
+                <p>Statements regarding "Metabolic Support" and "Fat-Burning" are based on clinical ingredient profiles
+                    but should not be interpreted as absolute medical guarantees. Individual physiological results vary
+                    based on diet, activity levels, and pre-existing conditions. No civil claims should be leveraged
+                    against this promotional review page for variations in individual progress.</p>
+
+                <h4 class="font-bold text-gray-900 text-base mt-4">Clause 3: Regional Compliance</h4>
+                <p>Service availability shown for USA, Canada, UK, and Australia depends on current logistical stock and
+                    regional carrier regulations. We reserve the right to update regional active status without prior
+                    notice.</p>
+            </div>
+            <div class="px-8 py-4 bg-gray-50 border-t border-gray-100 flex justify-end">
+                <button onclick="closeModals()"
+                    class="bg-gray-900 text-white font-bold px-8 py-2 rounded-lg hover:bg-black transition-colors uppercase text-xs tracking-widest">Acknowledge</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Refunds & Returns -->
+    <div id="refundsModal"
+        class="modal fixed inset-0 z-50 bg-black/80 backdrop-blur-sm justify-center items-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl border border-gray-100"
+            onclick="event.stopPropagation()">
+            <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+                <div class="flex items-center gap-3 text-gray-900">
+                    <i class="fa-solid fa-rotate-left text-brand-blue text-xl"></i>
+                    <h3 class="font-bold text-xl tracking-tight">Returns & Guarantee Policy</h3>
+                </div>
+                <button onclick="closeModals()"
+                    class="text-gray-400 hover:text-red-500 transition-colors text-2xl">×</button>
+            </div>
+            <div class="px-8 py-8 overflow-y-auto text-[13px] leading-relaxed space-y-6 text-text-muted modal-content">
+                <p class="font-bold text-gray-800">Your purchase of Gelatine Sculpt is fully protected by a robust
+                    60-Day Money-Back Guarantee.</p>
+
+                <h4 class="font-bold text-gray-900 text-base mt-4">Section 1: The 60-Day Protection Window</h4>
+                <p>You have exactly 60 days from the date of initial dispatch to test the formula. If the results do not
+                    meet your expectations, you are entitled to initiate a refund request through the verified support
+                    channels provided in your financial invoice. This ensures a risk-free experience for our
+                    international customers.</p>
+
+                <h4 class="font-bold text-gray-900 text-base mt-4">Section 2: Return Logistics</h4>
+                <p>Refunds are processed upon the manufacturer's receipt of the returned items (even if bottles are
+                    empty). Shipping and handling fees for returns are typically the responsibility of the customer
+                    unless specified otherwise by the manufacturer's regional policy.</p>
+
+                <h4 class="font-bold text-gray-900 text-base mt-4">Section 3: Support Contact</h4>
+                <p>Always keep your confirmation email and order ID. All return requests must be handled via the primary
+                    supplier's dedicated support dashboard to ensure tracking and valid processing.</p>
+            </div>
+            <div class="px-8 py-4 bg-gray-50 border-t border-gray-100 flex justify-end">
+                <button onclick="closeModals()"
+                    class="bg-gray-900 text-white font-bold px-8 py-2 rounded-lg hover:bg-black transition-colors uppercase text-xs tracking-widest">Back
+                    to Page</button>
             </div>
         </div>
     </div>
